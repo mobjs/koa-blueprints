@@ -1,0 +1,19 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "koa": "^2.2.0",
+    "koa-router": "^7.1.1",
+    "koa-views": "^6.0.1",
+    "mongoose": "^4.9.4",
+    "mustache": "^2.3.0"
+  }
+}
