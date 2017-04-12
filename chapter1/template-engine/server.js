@@ -6,7 +6,7 @@ const app = new Koa();
 const router = new Router();
 
 app.use(views(__dirname + '/views', {
-  map: { jade: 'jade', html: 'mustache' }
+  map: { jade: 'jade', html: 'mustache', ejs: 'ejs' }
 }));
 
 router.get('/', async (ctx, next) => {
@@ -18,6 +18,12 @@ router.get('/', async (ctx, next) => {
 router.get('/app', async (ctx, next) => {
   await ctx.render('app.html', {
     pageTitle: '应用控制台'
+  });
+});
+
+router.get('/ejs', async (ctx, next) => {
+  await ctx.render('ejs.ejs', {
+    pageTitle: 'ejs 模板引擎'
   });
 });
 
