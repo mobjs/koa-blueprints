@@ -1,7 +1,7 @@
 const passport = require('koa-passport');
 const LocalStrategy = require('passport-local').Strategy;
 const GitHubStrategy = require('passport-github').Strategy;
-const mongoose = require('mongoose').model('User');
+const User = require('mongoose').model('User');
 
 const config = require('../config')();
 
