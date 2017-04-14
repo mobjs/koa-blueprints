@@ -1,14 +1,17 @@
 const config = {
   development: {
     db_url: 'mongodb://localhost/ch01',
+    session_db: 'mongodb://localhost/ch01_sessions',
     domain: 'localhost'
   },
   test: {
     db_url: 'mongodb://localhost/ch01_test',
+    session_db: 'mongodb://localhost/ch01_sessions_test',
     domain: 'localhost'
   },
   production: {
     db_url: process.env.MONGOLAB_URI,
+    session_db: process.env.MONGOLAB_URI,
     domain: 'ch01.xscripter.com'
   }
 };
