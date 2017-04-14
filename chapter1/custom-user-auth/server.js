@@ -1,9 +1,19 @@
 const Koa = require('koa');
+const convert = require('koa-convert');
+const session = require('koa-generic-session');
+const RedisStore = require('koa-redis');
 const Router = require('koa-router');
 const views = require('koa-views');
 
 const app = new Koa();
 const router = new Router();
+
+// sessions
+
+app.keys = ['your-session-secret'];
+app.use(convert(session({
+  store: new RedisStore()
+})));
 
 app.use(views(__dirname + '/views', {
   map: { jade: 'jade', html: 'mustache' }
